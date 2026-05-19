@@ -17,12 +17,12 @@ npm run dev
 
 * Capturas de pantalla:
 
-* Ejercicios 2 y 3:
-  ![Ejercicios 2 y 3](images/ej2y3.png)
+Ejercicios 2 y 3:
+  ![Ejercicios 2 y 3](scr/images/ej2y3.png)
 
-* Ejercicios 4 y 5:
-  ![Ejercicios 4 y 5](images/ej4y5.png)
+Ejercicios 4 y 5:
+  ![Ejercicios 4 y 5](scr/images/ej4y5.png)
 
-* Ejercicio 6:
-  ![Ejercicio 6](images/ej6.png)
+Ejercicio 6:
+  ![Ejercicio 6](scr/images/ej6.png)
 

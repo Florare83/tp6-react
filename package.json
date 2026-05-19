@@ -3,7 +3,6 @@
   "version": "0.0.0",
   "private": true,
   "type": "module",
-  "homepage": "https://florare83.github.io/tp6-react",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
