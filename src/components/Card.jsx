@@ -16,13 +16,13 @@
 //  La diferencia: el primer Card no tiene children, el segundo sí.
 // ═══════════════════════════════════════════════════════════════
 
-function Card({titulo, descripcion, imagen, precio, children }) {
+function Card({titulo, descripcion, imagen, precio=0, children }) {
   return (
     <article className="card">
       <h3>{titulo}</h3>
       <p>{descripcion}</p>
       <img src={imagen} alt={titulo}/>
-      <p>{precio}</p>
+      <p>${precio}</p>
 
       {/* children solo se renderiza si el padre le mandó algo adentro */}
       {children}

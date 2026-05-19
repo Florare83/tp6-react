@@ -1,4 +1,5 @@
 import { useState } from "react";
+import Card from "./Card.jsx";
 
 /*
  * EJERCICIO 5: Lista de Productos con Filtrado
@@ -12,14 +13,14 @@ import { useState } from "react";
 
 // Datos fijos (no necesitan useState porque no cambian)
 const PRODUCTOS = [
-  { id: 1, nombre: "Unanimo Party",             precio: 30500,  categoria: "Familiar", enStock: true },
-  { id: 2, nombre: "Masomenos",                 precio: 51500,  categoria: "Familiar", enStock: true },
-  { id: 3, nombre: "Catan",                     precio: 111500, categoria: "Experto",  enStock: false },
-  { id: 4, nombre: "Buscadores de Unicornios",  precio: 29700,  categoria: "Infantil", enStock: true },
-  { id: 5, nombre: "Carcassonne",               precio: 47500,  categoria: "Experto",  enStock: true },
-  { id: 6, nombre: "Dodo",                      precio: 81500,  categoria: "Infantil", enStock: true },
-  { id: 7, nombre: "La gran siete",             precio: 29000,  categoria: "Familiar", enStock: true },
-  { id: 8, nombre: "Azul",                      precio: 115000, categoria: "Experto",  enStock: false },
+  { id: 1, nombre: "Unanimo Party",             precio: 30500,  categoria: "Familiar", imagen: "https://apioverde.com/cdn/shop/files/D_752953-MLA82943246847_032025-F_1024x1024.jpg?v=1752591096", enStock: true },
+  { id: 2, nombre: "Masomenos",                 precio: 51500,  categoria: "Familiar", imagen: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS1Jv-u0rkyDRsltEFQ1XkPr7cDFXoZuH8Lyw&s", enStock: true },
+  { id: 3, nombre: "Catan",                     precio: 111500, categoria: "Experto",  imagen: "https://devirinvestments.s3.eu-west-1.amazonaws.com/img/catalog/product/8436017220100-1200-face3d.jpg", enStock: false },
+  { id: 4, nombre: "Buscadores de Unicornios",  precio: 29700,  categoria: "Infantil", imagen: "https://acdn-us.mitiendanube.com/stores/393/260/products/caja-2-sin-fondo-50228732860869db5e17586395054900-480-0.webp", enStock: true },
+  { id: 5, nombre: "Carcassonne",               precio: 47500,  categoria: "Experto",  imagen: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ0QZhisa2tKRa2YTmjEjXPBMwT3DkYtKgcuQ&s", enStock: true },
+  { id: 6, nombre: "Dodo",                      precio: 81500,  categoria: "Infantil", imagen: "https://devirinvestments.s3.eu-west-1.amazonaws.com/img/catalog/product/8436589627406-1200-face3d.jpg", enStock: true },
+  { id: 7, nombre: "La gran siete",             precio: 29000,  categoria: "Familiar", imagen: "https://acdn-us.mitiendanube.com/stores/117/811/products/la-gran-siete1-50b594c3bc539b637216580990369888-640-0.webp", enStock: true },
+  { id: 8, nombre: "Azul",                      precio: 115000, categoria: "Experto",  imagen: "https://http2.mlstatic.com/D_NQ_NP_2X_939158-MLA99525260442_122025-F.webp", enStock: false },
   ];
 
 // Sacamos las categorias unicas del array
@@ -74,18 +75,22 @@ function ListaProductos() {
           <p className="vacio">No hay productos con esos filtros.</p>
         ) : (
           productosFiltrados.map((producto) => (
-            <div
-              key={producto.id}
-              className={`producto-card ${!producto.enStock ? "sin-stock" : ""}`}
-            >
-              <div className="nombre">{producto.nombre}</div>
-              <div className="precio">${producto.precio.toLocaleString("es-AR")}</div>
-              <div className="categoria">{producto.categoria}</div>
-              <span className={`badge-stock ${producto.enStock ? "badge-si" : "badge-no"}`}>
-                {producto.enStock ? "En stock" : "Sin stock"}
-              </span>
-            </div>
-          ))
+  <Card
+    key={producto.id}
+    titulo={producto.nombre}
+    descripcion={producto.categoria}
+    imagen={producto.imagen}
+    precio={producto.precio}
+  >
+    <span
+      className={`badge-stock ${
+        producto.enStock ? "badge-si" : "badge-no"
+      }`}
+    >
+      {producto.enStock ? "En stock" : "Sin stock"}
+    </span>
+  </Card>
+))
         )}
       </div>
       

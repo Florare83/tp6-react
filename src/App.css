@@ -131,15 +131,15 @@ body {
 .formulario-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; }
 @media (max-width: 600px) { .formulario-grid { grid-template-columns: 1fr; } }
 .form-grupo { margin-bottom: 1rem; }
-.form-grupo label { display: block; font-weight: 600; margin-bottom: 0.4rem; color: var(--gris-800); font-size: 0.9rem; }
+.form-grupo label { display: block; font-weight: 600; margin-bottom: 0.4rem; color: var(--text); font-size: 0.9rem; }
 .form-grupo input, .form-grupo select, .form-grupo textarea {
-  width: 100%; padding: 0.6rem 0.8rem; border: 2px solid var(--gris-200);
+  width: 100%; padding: 0.6rem 0.8rem; border: 2px solid var(--text-light);
   border-radius: 8px; font-size: 0.95rem; font-family: inherit; transition: border-color 0.2s;
 }
-.form-grupo input:focus, .form-grupo select:focus, .form-grupo textarea:focus { outline: none; border-color: var(--azul); }
+.form-grupo input:focus, .form-grupo select:focus, .form-grupo textarea:focus { outline: none; border-color: var(--secondary); }
 .preview-card {
-  background: linear-gradient(135deg, var(--azul-oscuro), #2563eb);
-  color: var(--blanco); padding: 1.5rem; border-radius: var(--radio); height: fit-content;
+  background: linear-gradient(135deg, var(--secondary), #2563eb);
+  color: var(--bg); padding: 1.5rem; border-radius: var(--radius); height: fit-content;
 }
 .preview-card h3 { font-size: 1.1rem; margin-bottom: 1rem; opacity: 0.8; }
 .preview-card .preview-nombre { font-size: 1.5rem; font-weight: 700; margin-bottom: 0.5rem; }

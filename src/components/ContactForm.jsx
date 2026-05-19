@@ -8,6 +8,7 @@ function Formulario() {
     const handleSubmit = (e) => {
         e.preventDefault();  // evita recarga de página
         alert(`Hola ${nombre}! Tu email es ${email}. Tu mensaje es ${mensaje}`);
+        console.log({ nombre, email, mensaje });
     };
 
     return (
@@ -25,13 +26,13 @@ function Formulario() {
                 placeholder="Tu email"
             />
             <input
-                type="mensaje"
+                type="text"
                 value={mensaje}                     // controlado
                 onChange={(e) => setMensaje(e.target.value)}
                 placeholder="Tu mensaje"
             />
             <button type="submit" disabled={!nombre || !email || !mensaje}>Enviar</button>
-            <p>Preview: Hola, {nombre || "..."}</p>
+            <p>Preview: Hola, {nombre || "..."}</p><p>Email: {email}</p><p>Mensaje: {mensaje}</p>
         </form>
     );
 }

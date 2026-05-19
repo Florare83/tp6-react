@@ -35,21 +35,21 @@ function App() {
             titulo="Catan"
             descripcion="Juego de estrategia y azar"
             imagen="https://devirinvestments.s3.eu-west-1.amazonaws.com/img/catalog/product/8436017220100-1200-face3d.jpg"
-            precio="$20000"
+            precio={200000}
           />
 
           <Card
             titulo="Carcassone"
             descripcion="Juego de estrategia con losetas"
             imagen="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ0QZhisa2tKRa2YTmjEjXPBMwT3DkYtKgcuQ&s"
-            precio="$20000"
+            precio={150000}
           />
 
           <Card
             titulo="El Espía"
             descripcion="Juego de roles ocultos"
             imagen="https://diadejuegos.pe/2009-large_default/el-espia-que-se-perdio.jpg"
-            precio="$20000"
+            precio={30000}
           />          
 
           {/* Card 2: con children (un <Boton /> adentro(ya no)) */}
@@ -57,7 +57,7 @@ function App() {
             titulo="Buscadores de unicornios"
             descripcion="Juego infantil"
             imagen="https://acdn-us.mitiendanube.com/stores/393/260/products/caja-2-sin-fondo-50228732860869db5e17586395054900-480-0.webp"
-            precio="$20000"
+            precio={15000}
           >
           </Card>
         </section>
